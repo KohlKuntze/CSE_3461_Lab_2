@@ -20,4 +20,4 @@ class MyTopo( Topo ):
 
 topos = { 'mytopo': ( lambda: MyTopo() ) }
 
-print(MyTopo.build())
+print(MyTopo.build(MyTopo))
