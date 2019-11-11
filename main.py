@@ -3,6 +3,7 @@ from mininet.topo import Topo
 class MyTopo( Topo ):
     "Simple topology example."
 
+
     def build( self ):
         "Create custom topo."
 
@@ -18,6 +19,10 @@ class MyTopo( Topo ):
         self.addLink( rightSwitch, rightHost )
 
 
+network = MyTopo()
+
+print(network)
+
 topos = { 'mytopo': ( lambda: MyTopo() ) }
 
-print(MyTopo.build(MyTopo))
+print(MyTopo.build(MyTopo()))
